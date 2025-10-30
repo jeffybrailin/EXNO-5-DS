@@ -418,13 +418,39 @@ ax.set_ylabel('Values')
 ax.set_title('Box Plot')
 ```
 
-![Uploading image.png…]()
+<img width="839" height="617" alt="image" src="https://github.com/user-attachments/assets/bdf15b9b-80d6-45b4-b733-cae6390f9610" />
+
+
+```
+import matplotlib.pyplot as plt
+activities=['eat','sleep','work','play']
+slices=[3,7,8,6]
+colors=['r','y','g','b']
+plt.pie(slices,labels=activities,colors=colors,startangle=90,shadow=True,explode=(0,0,0.1,0),radius=1.2,autopct='%1.1f%%')
+plt.legend()
+plt.show()
+```
+<img width="571" height="510" alt="image" src="https://github.com/user-attachments/assets/27392a77-db7f-4b64-af1e-c536610f4edd" />
 
 ```
 
+labels='Python','C++','Ruby','Java'
+sizes=[215,130,245,210]
+colors=['gold','yellowgreen','lightcoral','lightskyblue']
+explode=(0,0.4,0,0.5)
+
+plt.pie(sizes,explode=explode,labels=labels,colors=colors,autopct="%1.1f%%",shadow=True)
+plt.axis('equal')
+plt.show()
+
 ```
+
+<img width="572" height="510" alt="image" src="https://github.com/user-attachments/assets/fcf28b66-cf3e-40b6-96f9-934b56eeda6f" />
 
 
 # Result:
 
- Include your result here
+Data Visualization using matplot python library for the given data is successful.
+
+## Insights:
+I started with plt.plot plus labels, title, legend, and axis limits to sanity-check scale, drift, sudden breaks, and nonlinear trends, which points to normalization, trimming extremes, and adding trend or lag features, use plt.scatter to inspect relationship shape and spot curvature, suggesting interactions or polynomial terms, lean on plt.hist and boxplot to see skew and outliers, guiding log or Yeo-Johnson transforms, robust scaling, or IQR capping, fill_between traces upper and lower envelopes that convert into rolling min, max, and mean bands, stackplot shows how parts change within a whole, inspiring ratio and share features; bar and barh highlight category contrast for one-hot or target encoding and for merging tiny groups, make_interp_spline produces a smooth signal that exposes gentle structure worth capturing with moving averages or splines; the sine wave and clean arange grids help notice seasonality and encourage sin and cos time features; subplot puts raw versus cleaned views side by side to confirm the preprocessing actually fixes the issue and savefig locks these checks and decisions into the workflow so choices stay reproducible.
